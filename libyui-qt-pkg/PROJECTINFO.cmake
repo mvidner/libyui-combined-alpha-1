@@ -4,7 +4,7 @@ SET( BASELIB		"yui" )		# don't change this
 
 ##### MAKE ALL NEEDED CHANGES HERE #####
 
-SET( SUBDIRS		src examples )	# set the subdirs where your code is located.
+SET( SUBDIRS		src examples tests)	# set the subdirs where your code is located.
 SET( PLUGINNAME		qt-pkg )	# define the your plugin's name, e.g. {gtk, ncurses-pkg, qt-graph}
 SET( LIB_DEPS		Qt5Core Qt5Gui Qt5Widgets Qt5Svg Qt5X11Extras Zypp )	# define the plugin's dependecies CMake should look for separated with spaces; libyui-internal deps go in the next line
 SET( INTERNAL_DEPS	Libyui Libyui-qt )	# include libyui or it's plugins (if needed), too!
@@ -23,3 +23,5 @@ SET( INSTALL_HELP_ICONS_DIR 	"${YPREFIX}/share/YaST2/images" )
 
 # maybe '#include <yui/Libyui_config.h>' rather than using '-DTHEMEDIR'
 SET( YUIQT_THEMEDIR		"${YPREFIX}/share/YaST2/theme" )
+
+ENABLE_TESTING()
